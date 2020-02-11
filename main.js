@@ -1,5 +1,4 @@
-/* eslint-disable no-console */
-const Reactive = require('./reactive');
+const Reactive = require('./lib/reactive');
 
 const myComponent = {
   data: {
@@ -17,10 +16,3 @@ const myComponent = {
 };
 
 Reactive.init(myComponent);
-
-console.log(JSON.stringify(myComponent, null, 2));
-
-setTimeout(() => {
-  myComponent.data.price = 10;
-  console.log(JSON.stringify(myComponent, null, 2));
-}, 2000);
